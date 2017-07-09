@@ -3,11 +3,13 @@
 const express = require('express')
 const app = express()
 const bodyParser = require('body-parser')
-const request = require('request-promise')
+const validator = require('express-validator')
 const pokemons = require('./routes/pokemons')
+const customValidators = require('./middleware/custom-validators')
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
+app.use(validator({ customValidators: customValidators }))
 
 app.use('/pokemons', pokemons)
 

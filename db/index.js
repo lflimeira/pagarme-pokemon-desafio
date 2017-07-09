@@ -2,7 +2,8 @@
 
 const Sequelize = require('sequelize')
 const sequelize = new Sequelize('pokemons', null, null, {
-  dialect: 'sqlite'
+  dialect: 'sqlite',
+  storage: './database.sqlite'
 })
 
 sequelize.authenticate()
