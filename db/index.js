@@ -1,9 +1,11 @@
 'use strict'
 
 const Sequelize = require('sequelize')
-const sequelize = new Sequelize('pokemons', null, null, {
+const Config = require('../config');
+
+const sequelize = new Sequelize(Config.db.database, Config.db.user, Config.db.password, {
   dialect: 'sqlite',
-  storage: './database.sqlite'
+  storage: './'+ Config.db.storage
 })
 
 sequelize.authenticate()

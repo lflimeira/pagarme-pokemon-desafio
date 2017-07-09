@@ -6,6 +6,7 @@ const bodyParser = require('body-parser')
 const validator = require('express-validator')
 const pokemons = require('./routes/pokemons')
 const customValidators = require('./middleware/custom-validators')
+const Config = require('./config')
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
@@ -19,6 +20,6 @@ app.use(function (req, res) {
   })
 })
 
-app.listen(process.env.PORT || 3000, function () {
-  console.log('Listening on http://localhost:3000')
+app.listen(Config.server.port, function () {
+  console.log('Listening on http://'+ Config.server.host +':'+ Config.server.port)
 })

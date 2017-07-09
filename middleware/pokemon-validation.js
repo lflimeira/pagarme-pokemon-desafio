@@ -17,7 +17,7 @@ validation.createPokemon = function (req, res, next) {
 
 validation.updatePokemon = function (req, res, next) {
     req.checkParams("id", "A valid id is required." ).isInt();
-    
+
     let errors = req.getValidationResult().then(function (result) {
         if(!result.isEmpty()){
             res.status(400).send({"error": result.array()[0].msg})
@@ -27,13 +27,21 @@ validation.updatePokemon = function (req, res, next) {
     })
 }
 
-validation.hasStock = function (req, res, pokemon, next){
-    if (pokemon.stock < req.body.quantity) {
-      return res.status(400).send({
-        error: 'Not enought ' + pokemon.name + ' in stock: ' + pokemon.stock
-      })
-    }
-    next()
+validation.buyPokemon = function (req, res, next) {
+    req.checkParams("id", "A valid id is required." ).isInt();
+    req.checkBody("quantity", "A valid quantity is required.").notEmpty().isInt();
+    req.checkBody("card_number", "A card number is required.").notEmpty();
+    req.checkBody("card_exp_date", "The card expiration date is required.").notEmpty();
+    req.checkBody("card_holder_name", "The holder name is required.").notEmpty();
+    req.checkBody("card_cvv", "The card cvv is required.").notEmpty();
+
+    let errors = req.getValidationResult().then(function (result) {
+        if(!result.isEmpty()){
+            res.status(400).send({"error": result.array()[0].msg})
+            return
+        }
+        next()
+    })
 }
 
 module.exports = validation
