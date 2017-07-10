@@ -5,6 +5,7 @@ const app = express()
 const bodyParser = require('body-parser')
 const validator = require('express-validator')
 const pokemons = require('./routes/pokemons')
+const token = require('./routes/token')
 const customValidators = require('./middleware/custom-validators')
 const Config = require('./config')
 
@@ -14,6 +15,8 @@ app.use(validator({ customValidators: customValidators }))
 
 app.use('/pokemons', pokemons)
 
+app.use('/token', token)
+
 app.use(function (req, res) {
   res.status(404).json({
     error: 'Not Found'
@@ -21,5 +24,5 @@ app.use(function (req, res) {
 })
 
 app.listen(Config.server.port, function () {
-  console.log('Listening on http://'+ Config.server.host +':'+ Config.server.port)
+  console.log('Listening on http://' + Config.server.host + ':' + Config.server.port)
 })
