@@ -20,7 +20,7 @@ const pagarme = {
 const security = {
   payload: process.env.PAYLOAD || { pokemon: 'pokemon' },
   secret_key: process.env.SECRET_KEY || 'pokemonpagarme',
-  token_expire: process.env.TKN_EXPIRE || 1800
+  token_expire: process.env.TKN_EXPIRE || '1 day'
 }
 
 module.exports = {

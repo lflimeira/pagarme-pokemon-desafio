@@ -1,0 +1,56 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  width: 320px;
+}
+
+.App-pokeball {
+  animation: App-ball-spin infinite 10s linear;
+  height: 50px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 185px;
+  padding: 20px;
+  color: white;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-ball-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.storeAccess{
+  background-color: #B22222;
+  color: #ffffff;
+}
+
+.welcome{
+  background-color: #ffffff;
+  padding: 20px;
+  margin-top: 60px;
+  border: 1px #222;
+  border-style: groove;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+
+.store{
+  background-color: #ffffff;
+  padding-top: 20px;
+  margin-top: 60px;
+  border: 1px #222;
+  border-style: groove;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  min-height: 300px;
+}
