@@ -8,10 +8,12 @@ const pokemons = require('./routes/pokemons')
 const token = require('./routes/token')
 const customValidators = require('./middleware/custom-validators')
 const Config = require('./config')
+const allowCors = require('./middleware/cors')
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(validator({ customValidators: customValidators }))
+app.use(allowCors)
 
 app.use('/pokemons', pokemons)
 
