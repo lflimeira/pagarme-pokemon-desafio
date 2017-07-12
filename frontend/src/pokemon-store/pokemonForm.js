@@ -14,7 +14,7 @@ export default props => (
                 <input id="stock" className="form-control" placeholder="Stock"></input>
             </div>
             <div className="col-xs-12 col-sm-1 col-md-1">
-                <IconButton style="primary" icon="plus" 
+                <IconButton styles={"primary"} icon="plus" 
                     onClick={props.handleAdd}></IconButton>
             </div>
         </div>

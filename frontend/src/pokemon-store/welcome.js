@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
+import axios from 'axios'
+
 import pokeball from '../main/images/pokeball.png';
 
+const URL = 'http://localhost:3000/token'
 
 class Welcome extends Component {
     constructor(props) {
@@ -9,7 +12,13 @@ class Welcome extends Component {
     }
 
     getToken() {
-        document.getElementById('token').value = "Token here"
+        axios.get(URL)
+        .then(function (resp) {
+            document.getElementById('token').value = resp.data.token
+        })
+        .catch(function (error) {
+            console.log(error);
+        })
     }
 
     render(){

@@ -54,3 +54,8 @@
   -webkit-border-radius: 5px;
   min-height: 300px;
 }
+
+.table-pokemon{
+  margin-top: 50px;
+  text-align: left;
+}
