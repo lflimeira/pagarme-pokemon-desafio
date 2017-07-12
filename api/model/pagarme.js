@@ -16,7 +16,7 @@ pagarme.buy = function (req, res, pokemon) {
     method: 'POST',
     json: {
       api_key: Config.pagarme.api_key,
-      amount: pokemon.price * req.body.quantity,
+      amount: pokemon.price * req.body.quantity * 100,
       card_number: req.body.card_number,
       card_expiration_date: req.body.card_exp_date,
       card_holder_name: req.body.card_holder_name,
