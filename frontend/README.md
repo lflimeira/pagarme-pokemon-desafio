@@ -18,7 +18,7 @@ Com o ambiente devidamente preparado, execute o comando `npm start` para iniciar
 
 ## Credits
 
-- [Luiz Felipe de Oliva Limeira](https://github.com/lflimeira02)
+- [Luiz Felipe de Oliva Limeira](https://github.com/lflimeira)
 
 
 
