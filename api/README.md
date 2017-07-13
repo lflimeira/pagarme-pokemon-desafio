@@ -94,4 +94,4 @@ Parâmetros:
 ## Credits
 
 - [Pagar.me](https://pagar.me/)
-- [Luiz Felipe de Oliva Limeira](https://github.com/lflimeira02)
+- [Luiz Felipe de Oliva Limeira](https://github.com/lflimeira)
