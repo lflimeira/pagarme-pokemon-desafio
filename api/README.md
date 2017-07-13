@@ -91,3 +91,7 @@ Parâmetros:
   card_cvv: { permite_nulo: false }
 }
 
+## Credits
+
+- [Pagar.me](https://pagar.me/)
+- [Luiz Felipe de Oliva Limeira](https://github.com/lflimeira02)
