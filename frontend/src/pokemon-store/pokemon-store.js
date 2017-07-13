@@ -24,7 +24,7 @@ class PokemonStore extends Component {
     }
 
     handleBuy(id){
-        alert(id)
+        hashHistory.push(`/buy/${id}`);
     }
 
     handleAdd() {
@@ -66,7 +66,7 @@ class PokemonStore extends Component {
 
     render(){
         return(
-            <div onLoad={this.checkIfTokenExist} className="col-md-12 store">
+            <div className="col-md-12 store">
                 <PokemonForm handleAdd={this.handleAdd} />
                 <PokemonList list={this.state.list} handleBuy={this.handleBuy}/>
             </div>
