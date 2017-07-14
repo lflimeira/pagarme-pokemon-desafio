@@ -44,7 +44,11 @@ class PokemonBuy extends Component {
         .catch(function (error) {
             if (error.response !== undefined) {
                 if(error.response.status === 400){
-                    alert(error.response.data.error)
+                    if(error.response.data.error.errors === undefined){
+                        alert(error.response.data.error)
+                    }else{
+                        alert(error.response.data.error.errors[0].message)
+                    }
                 }
             }
         })

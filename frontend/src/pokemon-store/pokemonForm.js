@@ -8,10 +8,10 @@ export default props => (
                 <input id="name" className="form-control" placeholder="Pokemon name"></input>
             </div>
             <div className="col-xs-12 col-sm-2 col-md-2">
-                <input id="price" className="form-control" placeholder="Price"></input>
+                <input type="number" id="price" className="form-control" placeholder="Price"></input>
             </div>
             <div className="col-xs-12 col-sm-2 col-md-2">
-                <input id="stock" className="form-control" placeholder="Stock"></input>
+                <input type="number" id="stock" className="form-control" placeholder="Stock"></input>
             </div>
             <div className="col-xs-12 col-sm-1 col-md-1">
                 <IconButton styles={"primary"} icon="plus" 

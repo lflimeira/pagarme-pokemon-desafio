@@ -43,6 +43,9 @@ class PokemonStore extends Component {
         .then(function (resp) {
             if(resp.status === 200){
                 alert(resp.data.name + ' successfully registered.')
+                document.getElementById('name').value = ""
+                document.getElementById('price').value = ""
+                document.getElementById('stock').value = ""
             }
         })
         .catch(function (error) {

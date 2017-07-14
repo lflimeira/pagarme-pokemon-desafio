@@ -38,7 +38,7 @@ pagarme.buy = function (req, res, pokemon) {
       }
     })
     .catch(function (err) {
-      return res.status(err.response.statusCode).send(err.response.body)
+      return res.status(err.response.statusCode).send(err)
     })
 }
 
