@@ -1,8 +1,8 @@
-# Desafio técnico Pagar.me
+# Technical challenge Pagar.me
 
-Esse prjeto foi feito como um desafio técnico passado pela [Pagar.me](https://pagar.me/).
+This project was made as a technical challenge passed by [Pagar.me](https://pagar.me/).
 
-## Documentação 
+## Documentation 
 
 - [API](/api/README.md)
 - [Frontend](/frontend/README.md)
